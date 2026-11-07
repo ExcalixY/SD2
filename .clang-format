@@ -1,0 +1,18 @@
+---
+BasedOnStyle: Google
+AccessModifierOffset: -2
+AllowShortBlocksOnASingleLine: Empty
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+FixNamespaceComments: false
+SpaceInEmptyBlock: true
+TabWidth: 2
+TableGenBreakInsideDAGArg: BreakElements
+AllowAllConstructorInitializersOnNextLine: true
+AlignAfterOpenBracket: BlockIndent
+BinPackArguments: false
+BinPackParameters: OnePerLine
+ContinuationIndentWidth: 2
+ColumnLimit: 120
+BreakAfterOpenBracketIf: false
+BreakBeforeCloseBracketIf: false

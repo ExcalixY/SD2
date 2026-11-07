@@ -1,0 +1,28 @@
+CompileFlags:
+  # GCC-only flags from the CMake compile database that clang doesn't understand
+  # Leftovers from GCC module scanning, in case an old compile database is loaded
+  Remove:
+    - -fmodules-ts
+    - -fmodule-mapper=*
+    - -fdeps-format=*
+  Add:
+    - -Wall
+    - -Wextra
+    - -Wno-unused-parameter
+  CompilationDatabase: build/linux-debug
+
+Diagnostics:
+  UnusedIncludes: Strict
+  MissingIncludes: Strict
+  Includes:
+    # Internal GLM headers; the public glm/*.hpp ones are included instead
+    IgnoreHeader:
+      - glm/detail/.*
+
+InlayHints:
+  Enabled: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+
+Completion:
+  HeaderInsertion: Never

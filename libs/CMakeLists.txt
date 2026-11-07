@@ -1,0 +1,3 @@
+set(EXCALCORE_UNIT_TESTS OFF)
+set(EXCALCORE_TEST_APP OFF)
+add_subdirectory(ExcalEngine EXCLUDE_FROM_ALL)

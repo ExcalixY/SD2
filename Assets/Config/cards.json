@@ -1,0 +1,358 @@
+{
+  "version": 1,
+  "damageCards": [
+    {
+      "id": "small_blind",
+      "name": "Small Blind",
+      "type": "ATTACK",
+      "specs": {
+        "subtype": "DAMAGE",
+        "damage": 150
+      },
+      "description": "+150 damage while on the field.",
+      "iconSprite": "ATTACK_DAMAGE/small_blind.png"
+    },
+    {
+      "id": "big_blind",
+      "name": "Big Blind",
+      "type": "ATTACK",
+      "specs": {
+        "subtype": "DAMAGE",
+        "damage": 300
+      },
+      "description": "+300 damage while on the field.",
+      "iconSprite": "ATTACK_DAMAGE/big_blind.png"
+    },
+    {
+      "id": "straddle",
+      "name": "Straddle",
+      "type": "ATTACK",
+      "specs": {
+        "subtype": "DAMAGE",
+        "damage": 500
+      },
+      "description": "+500 damage while on the field.",
+      "iconSprite": "ATTACK_DAMAGE/straddle.png"
+    },
+    {
+      "id": "two_to_one",
+      "name": "Two to One",
+      "type": "ATTACK",
+      "specs": {
+        "subtype": "MULT",
+        "mult": 2
+      },
+      "description": "+2 mult while on the field.",
+      "iconSprite": "ATTACK_MULT/two_to_one.png"
+    },
+    {
+      "id": "five_to_one",
+      "name": "Five to One",
+      "type": "ATTACK",
+      "specs": {
+        "subtype": "MULT",
+        "mult": 5
+      },
+      "description": "+5 mult while on the field.",
+      "iconSprite": "ATTACK_MULT/five_to_one.png"
+    },
+    {
+      "id": "ten_to_one",
+      "name": "Ten to One",
+      "type": "ATTACK",
+      "specs": {
+        "subtype": "MULT",
+        "mult": 10
+      },
+      "description": "+10 mult while on the field.",
+      "iconSprite": "ATTACK_MULT/ten_to_one.png"
+    }
+  ],
+  "spellCards": [
+    {
+      "id": "refund",
+      "name": "Refund",
+      "type": "SPELL",
+      "specs": {
+        "subtype": "BUFF",
+        "duration": 1,
+        "event": "play",
+        "actions": [
+          {
+            "name": "heal",
+            "player": 15000
+          }
+        ]
+      },
+      "description": "Restore 1500 HP.",
+      "iconSprite": "SPELL_BUFF/refund.png"
+    },
+    {
+      "id": "double_down",
+      "name": "Double Down",
+      "type": "SPELL",
+      "specs": {
+        "subtype": "BUFF",
+        "duration": 1,
+        "event": "calculate",
+        "actions": [
+          {
+            "name": "multiplyMult",
+            "player": 1.2
+          }
+        ]
+      },
+      "description": "Multiplies your total mult by 1.2 this turn.",
+      "iconSprite": "SPELL_BUFF/double_down.png"
+    },
+    {
+      "id": "lucky_number_7",
+      "name": "Lucky Number 7",
+      "type": "SPELL",
+      "specs": {
+        "subtype": "BUFF",
+        "duration": -1,
+        "event": "comboBreak",
+        "actions": [
+          {
+            "name": "keepCombo",
+            "player": true
+          }
+        ]
+      },
+      "description": "The next time your combo would break, it doesn't.",
+      "iconSprite": "SPELL_BUFF/lucky_number_7.png"
+    },
+    {
+      "id": "hit_me",
+      "name": "Hit Me",
+      "type": "SPELL",
+      "specs": {
+        "subtype": "BUFF",
+        "duration": 1,
+        "event": "play",
+        "actions": [
+          {
+            "name": "drawCards",
+            "player": 2
+          }
+        ]
+      },
+      "description": "Draw 2 cards (still limited by the hand cap).",
+      "iconSprite": "SPELL_BUFF/hit_me.png"
+    },
+    {
+      "id": "let_it_ride",
+      "name": "Let It Ride",
+      "type": "SPELL",
+      "specs": {
+        "subtype": "BUFF",
+        "duration": 1,
+        "event": "play",
+        "actions": [
+          {
+            "name": "addCombo",
+            "player": 1
+          }
+        ]
+      },
+      "description": "Instantly gain +1 combo level.",
+      "iconSprite": "SPELL_BUFF/let_it_ride.png"
+    },
+    {
+      "id": "no_action",
+      "name": "No Action",
+      "type": "SPELL",
+      "specs": {
+        "subtype": "BUFF",
+        "duration": 1,
+        "event": "incomingHit",
+        "actions": [
+          {
+            "name": "multiplyHit",
+            "player": 0,
+            "opponent": 0
+          },
+          {
+            "name": "keepCombo",
+            "player": true,
+            "opponent": true
+          }
+        ]
+      },
+      "description": "Block all damage on both sides for 1 turn. Combos are paused, not broken.",
+      "iconSprite": "SPELL_BUFF/no_action.png"
+    },
+    {
+      "id": "rake",
+      "name": "Rake",
+      "type": "SPELL",
+      "specs": {
+        "subtype": "DEBUFF",
+        "duration": 3,
+        "event": "afterHit",
+        "actions": [
+          {
+            "name": "dealDamage",
+            "opponent": 500
+          }
+        ]
+      },
+      "description": "The opponent takes 500 damage after each hit, for 3 turns.",
+      "iconSprite": "SPELL_DEBUFF/rake.png"
+    },
+    {
+      "id": "cold_streak",
+      "name": "Cold Streak",
+      "type": "SPELL",
+      "specs": {
+        "subtype": "DEBUFF",
+        "duration": 3,
+        "event": "calculate",
+        "actions": [
+          {
+            "name": "multiplyDamage",
+            "opponent": 0.8
+          }
+        ]
+      },
+      "description": "The opponent produces 20% less damage for 3 turns. Can make them miss their quota.",
+      "iconSprite": "SPELL_DEBUFF/cold_streak.png"
+    },
+    {
+      "id": "misdeal",
+      "name": "Misdeal",
+      "type": "SPELL",
+      "specs": {
+        "subtype": "DEBUFF",
+        "duration": 1,
+        "event": "draw",
+        "actions": [
+          {
+            "name": "limitDraw",
+            "opponent": 1
+          }
+        ]
+      },
+      "description": "Next turn, the opponent draws only 1 card.",
+      "iconSprite": "SPELL_DEBUFF/misdeal.png"
+    },
+    {
+      "id": "burn_it_up",
+      "name": "Burn It Up",
+      "type": "SPELL",
+      "specs": {
+        "subtype": "DEBUFF",
+        "duration": 1,
+        "event": "play",
+        "actions": [
+          {
+            "name": "destroyField",
+            "player": true,
+            "opponent": true
+          }
+        ]
+      },
+      "description": "Destroys every card on both fields, including your own.",
+      "iconSprite": "SPELL_DEBUFF/burn_it_up.png"
+    },
+    {
+      "id": "no_dice",
+      "name": "No Dice",
+      "type": "SPELL",
+      "specs": {
+        "subtype": "DEBUFF",
+        "duration": 1,
+        "event": "play",
+        "actions": [
+          {
+            "name": "destroyEffects",
+            "opponent": true,
+            "player": false
+          }
+        ]
+      },
+      "description": "Destroys every buff and debuff the opponent has in play.",
+      "iconSprite": "SPELL_DEBUFF/no_dice.png"
+    }
+  ],
+  "wildCards": [
+    {
+      "id": "jackpot",
+      "name": "Jackpot",
+      "type": "WILD",
+      "specs": {
+        "subtype": "ATTACK",
+        "damage": 1000,
+        "event": "calculate",
+        "actions": [
+          {
+            "name": "addDamagePerCombo",
+            "player": 250
+          }
+        ]
+      },
+      "description": "+1000 damage, plus 250 for every combo level.",
+      "iconSprite": "WILD_ATTACK/jackpot.png"
+    },
+    {
+      "id": "infinity",
+      "name": "Infinity",
+      "type": "WILD",
+      "specs": {
+        "subtype": "ATTACK",
+        "event": "calculate",
+        "actions": [
+          {
+            "name": "multiplyMult",
+            "player": 2
+          }
+        ]
+      },
+      "description": "Doubles your total mult while on the field.",
+      "iconSprite": "WILD_ATTACK/infinity.png"
+    },
+    {
+      "id": "saving_grace",
+      "name": "Saving Grace",
+      "type": "WILD",
+      "specs": {
+        "subtype": "SPELL",
+        "duration": -1,
+        "event": "lethal",
+        "actions": [
+          {
+            "name": "setHpPercent",
+            "player": 0.3
+          }
+        ]
+      },
+      "description": "The next time you would drop to 0 HP, survive with 30% instead.",
+      "iconSprite": "WILD_SPELL/saving_grace.png"
+    },
+    {
+      "id": "black_hole",
+      "name": "Black Hole",
+      "type": "WILD",
+      "specs": {
+        "subtype": "SPELL",
+        "duration": 1,
+        "event": "play",
+        "actions": [
+          {
+            "name": "destroyField",
+            "opponent": true,
+            "player": false
+          },
+          {
+            "name": "destroyEffects",
+            "opponent": true,
+            "player": false
+          }
+        ]
+      },
+      "description": "Destroys every card on the opponent's side: their field and every buff and debuff they have in play.",
+      "iconSprite": "WILD_SPELL/black_hole.png"
+    }
+  ]
+}

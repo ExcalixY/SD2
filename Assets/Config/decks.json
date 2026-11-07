@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "decks": [
+    {
+      "id": "merc_deck",
+      "name": "Mercenary Deck",
+      "description": "Focused on Damage-based cards.",
+      "sprite": "",
+      "card-balance": {
+        "type_damage": 13,
+        "type_mult": 13,
+        "type_buff": 7,
+        "type_debuff": 7,
+        "type_wild_damage": 0,
+        "type_wild_magic": 0
+      }
+    },
+    {
+      "id": "magic_deck",
+      "name": "Magician's Deck",
+      "description": "Focused on Magic-type cards.",
+      "sprite": "",
+      "card-balance": {
+        "type_damage": 9,
+        "type_mult": 9,
+        "type_buff": 11,
+        "type_debuff": 11,
+        "type_wild_damage": 0,
+        "type_wild_magic": 0
+      }
+    },
+    {
+      "id": "balanced_deck",
+      "name": "Balanced Deck",
+      "description": "Focused on Balance between Attacks and Magic.",
+      "sprite": "",
+      "card-balance": {
+        "type_damage": 10,
+        "type_mult": 10,
+        "type_buff": 10,
+        "type_debuff": 10,
+        "type_wild_damage": 0,
+        "type_wild_magic": 0
+      }
+    },
+    {
+      "id": "wild_deck",
+      "name": "Wild Deck",
+      "description": "A deck containing only random cards.",
+      "sprite": "",
+      "card-balance": {
+        "random": true,
+        "allowWildRandom": true
+      }
+    }
+  ]
+}

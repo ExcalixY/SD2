@@ -1,0 +1,8 @@
+build/
+out/
+compile_commands.json
+prototype
+scripts
+docs
+log.txt
+imgui.ini

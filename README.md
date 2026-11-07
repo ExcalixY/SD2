@@ -41,10 +41,18 @@ Use `windows-debug` for a debug build. The resulting `SD2Terminal.exe` is standa
 
 ## Running
 
+### Linux
+
 ```bash
 ./out/Linux-RELEASE/bin/SD2Terminal
 ```
 
-On Windows, run `SD2Terminal.exe` from the same folder.
+### Windows
 
-Options: `--deck ID`, `--seed N`, `--assets DIR`, `--fights N`, `--discard`, `--auto`, `--quiet`.
+```bat
+./out/Windows-RELEASE/bin/SD2Terminal
+```
+
+### Options
+
+`--deck ID`, `--seed N`, `--assets DIR`, `--fights N`, `--discard`, `--auto`, `--quiet`.

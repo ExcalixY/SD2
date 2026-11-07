@@ -1,0 +1,3 @@
+[submodule "libs/ExcalEngine"]
+	path = libs/ExcalEngine
+	url = https://github.com/ExcalixY/ExcalEngine
